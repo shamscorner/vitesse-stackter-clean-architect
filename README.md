@@ -164,6 +164,17 @@ pnpm build
 
 And you will see the generated file in `dist` that ready to be served.
 
+### Separation of Concerns
+
+- Create separate folder for each module and place them under `/src` folder
+- The following folders are auto imported within each module
+    - `components/`
+    - `modules/`
+    - `pages/`
+    - `stores/`
+- Place all the layouts in the `common/layouts` folder
+- Place all the custom styles in the `common/styles` folder and import them into `main.css`
+
 ### Deploy on Netlify
 
 Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
