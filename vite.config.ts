@@ -30,10 +30,15 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
+      pagesDir: [
+        { dir: 'src/**/pages', baseRoute: '' },
+      ],
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
+    Layouts({
+      layoutsDir: 'src/common/layouts',
+    }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -48,8 +53,14 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-components
     ViteComponents({
+      // relative paths to the directory to search for components
+      dirs: ['src/**/components'],
+
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
+
+      // search for subdirectories
+      deep: true,
 
       // allow auto import and register components used in markdown
       customLoaderMatcher: id => id.endsWith('.md'),
