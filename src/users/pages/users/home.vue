@@ -13,50 +13,43 @@ const choosePlans = () => {
 </script>
 
 <template>
-  <div>
-    <h1 class="text-2xl text-gray-500 capitalize mt-4 mb-10">
-      Fill up the form to proceed
-    </h1>
+  <div class="max-w-md mx-auto">
+    <v-title-lg>
+      {{ t('intro.fill-up-form') }}
+    </v-title-lg>
+
+    <div class="py-4" />
+
     <div>
-      <input
+      <v-input
         id="inputName"
         v-model="name"
+        typeof="text"
         :placeholder="t('intro.whats-your-name')"
         :aria-label="t('intro.whats-your-name')"
-        type="text"
-        autocomplete="false"
-        p="x-4 y-2"
-        w="250px"
-        text="center"
-        bg="transparent"
-        border="~ rounded gray-200 dark:gray-700"
-        outline="none active:none"
       >
-      <label class="hidden" for="inputName">{{ t('intro.whats-your-name') }}</label>
+        <label class="hidden" for="inputName">{{ t('intro.whats-your-name') }}</label>
+      </v-input>
     </div>
 
     <div class="py-2" />
 
     <div>
-      <input
+      <v-input
         id="inputEmail"
         v-model="email"
+        typeof="email"
         :placeholder="t('intro.whats-your-email')"
         :aria-label="t('intro.whats-your-email')"
-        type="email"
-        autocomplete="false"
-        p="x-4 y-2"
-        w="250px"
-        text="center"
-        bg="transparent"
-        border="~ rounded gray-200 dark:gray-700"
-        outline="none active:none"
       >
-      <label class="hidden" for="inputEmail">{{ t('intro.whats-your-email') }}</label>
+        <label class="hidden" for="inputEmail">{{ t('intro.whats-your-email') }}</label>
+      </v-input>
     </div>
 
     <div class="mt-5">
       <VButton
+        text="base"
+        p="x-4 y-2"
         :disabled="!name || !email"
         @click.self="choosePlans"
       >

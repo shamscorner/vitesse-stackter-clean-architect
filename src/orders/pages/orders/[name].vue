@@ -1,16 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const router = useRouter()
 </script>
 
 <template>
   <div class="max-w-md mx-auto">
-    <h1
-      text="2xl gray-700"
-      font="bold"
-      dark="text-gray-300"
-    >
+    <v-title-lg>
       {{ t('order.order-summary') }}
-    </h1>
+    </v-title-lg>
     <p
       m="y-5"
       text="gray-500"
@@ -37,9 +34,25 @@ const { t } = useI18n()
       />
     </div>
 
-    <VButton m="y-8" text="base" p="x-4 y-2">
-      {{ t('order.confirm-selected-plan') }}
-    </VButton>
+    <div class="mb-0 mt-8">
+      <VButton
+        text="base"
+        p="x-4 y-2"
+      >
+        {{ t('order.confirm-selected-plan') }}
+      </VButton>
+    </div>
+
+    <div class="mb-8">
+      <VButtonText
+        text="gray-500"
+        font="semibold"
+        p="x-4 y-2"
+        @click.self="router.back()"
+      >
+        {{ t('order.cancel-order') }}
+      </VButtonText>
+    </div>
   </div>
 </template>
 

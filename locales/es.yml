@@ -13,6 +13,7 @@ intro:
   aka: También conocido como
   whats-your-name: ¿Cómo te llamas?
   whats-your-email: ¿Cuál es tu correo electrónico?
+  fill-up-form: Complete el formulario para continuar
 not-found: No se ha encontrado
 order:
   order-summary: Resumen de la orden
@@ -26,3 +27,4 @@ order:
     monthly: Mensual
     weekly: Semanalmente
   confirm-selected-plan: Confirmar plan seleccionado
+  cancel-order: Cancelar orden

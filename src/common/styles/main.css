@@ -35,6 +35,13 @@ html.dark {
     disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-dark-50;
 }
 
+.btn-text {
+  @apply px-4 py-1 rounded inline-block
+   text-gray-600 cursor-pointer
+    hover:underline
+    disabled:cursor-default disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:underline dark:focus:ring-offset-dark-50;
+}
+
 .icon-btn {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out rounded
