@@ -56,13 +56,12 @@ const choosePlans = () => {
     </div>
 
     <div class="mt-5">
-      <button
-        class="m-3 text-sm btn"
+      <VButton
         :disabled="!name || !email"
-        @click="choosePlans"
+        @click.self="choosePlans"
       >
         {{ t('button.choose-plans') }}
-      </button>
+      </VButton>
     </div>
   </div>
 </template>

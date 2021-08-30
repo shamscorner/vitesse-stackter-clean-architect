@@ -14,3 +14,15 @@ intro:
   whats-your-name: ¿Cómo te llamas?
   whats-your-email: ¿Cuál es tu correo electrónico?
 not-found: No se ha encontrado
+order:
+  order-summary: Resumen de la orden
+  description: ¡Ahora puede escuchar millones de canciones, audiolibros y podcasts en cualquier dispositivo en cualquier lugar que desee!
+  plan: Plan
+  year: año
+  month: mes
+  week: semana
+  plans:
+    annual: Anual
+    monthly: Mensual
+    weekly: Semanalmente
+  confirm-selected-plan: Confirmar plan seleccionado
