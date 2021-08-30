@@ -5,7 +5,9 @@ export const useUserStore = defineStore('user', () => {
    * Current named of the user.
    */
   const savedName = ref('')
+  const savedEmail = ref('')
   const previousNames = ref(new Set<string>())
+  const previousEmails = ref(new Set<string>())
 
   const usedNames = computed(() => Array.from(previousNames.value))
   const otherNames = computed(() => usedNames.value.filter(name => name !== savedName.value))
@@ -23,10 +25,19 @@ export const useUserStore = defineStore('user', () => {
     savedName.value = name
   }
 
+  function setNewEmail(email: string) {
+    if (savedEmail.value)
+      previousEmails.value.add(savedEmail.value)
+
+    savedEmail.value = email
+  }
+
   return {
     setNewName,
     otherNames,
     savedName,
+    savedEmail,
+    setNewEmail,
   }
 })
 

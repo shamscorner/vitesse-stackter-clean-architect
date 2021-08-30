@@ -1,14 +1,19 @@
 <script setup lang="ts">
+import { useUserStore } from '~/users/stores/user'
 const { t } = useI18n()
-
 const router = useRouter()
+const userStore = useUserStore()
 
-const name = ref('')
-const email = ref('')
+const name = ref(userStore.savedName)
+const email = ref(userStore.savedEmail)
 
 const choosePlans = () => {
-  if (name.value && email.value)
+  if (name.value && email.value) {
+    userStore.setNewName(name.value)
+    userStore.setNewEmail(email.value)
+
     router.push(`/orders/${encodeURIComponent(name.value)}`)
+  }
 }
 </script>
 
@@ -21,29 +26,25 @@ const choosePlans = () => {
     <div class="py-4" />
 
     <div>
+      <label class="block mb-1" text="sm gray-500" for="inputName">{{ t('intro.whats-your-name') }}</label>
       <v-input
         id="inputName"
         v-model="name"
         typeof="text"
-        :placeholder="t('intro.whats-your-name')"
         :aria-label="t('intro.whats-your-name')"
-      >
-        <label class="hidden" for="inputName">{{ t('intro.whats-your-name') }}</label>
-      </v-input>
+      />
     </div>
 
     <div class="py-2" />
 
     <div>
+      <label class="block mb-1" text="sm gray-500" for="inputEmail">{{ t('intro.whats-your-email') }}</label>
       <v-input
         id="inputEmail"
         v-model="email"
         typeof="email"
-        :placeholder="t('intro.whats-your-email')"
         :aria-label="t('intro.whats-your-email')"
-      >
-        <label class="hidden" for="inputEmail">{{ t('intro.whats-your-email') }}</label>
-      </v-input>
+      />
     </div>
 
     <div class="mt-5">
