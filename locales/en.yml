@@ -28,3 +28,6 @@ order:
     weekly: Weekly
   confirm-selected-plan: Confirm Selected Plan
   cancel-order: Cancel Order
+  thanks-message: Thank you for your interest!
+  plan-contact-info: One of our employee will contact with you soon. You can grab a cup of coffee in the meantime.
+no-data-saved: This demo project is not making any external API request. So, your data is not saving anywhere else. It uses Pinia (vue 3 state management) module to save your form data in your browser.

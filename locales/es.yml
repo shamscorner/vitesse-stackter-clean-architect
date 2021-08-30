@@ -28,3 +28,6 @@ order:
     weekly: Semanalmente
   confirm-selected-plan: Confirmar plan seleccionado
   cancel-order: Cancelar orden
+  thanks-message: ¡Gracias por su interés!
+  plan-contact-info: Uno de nuestros empleados se comunicará con usted pronto. Mientras tanto, puedes tomar una taza de café.
+no-data-saved: Este proyecto de demostración no realiza ninguna solicitud de API externa. Por lo tanto, sus datos no se guardan en ningún otro lugar. Utiliza el módulo Pinia (gestión de estado vue 3) para guardar los datos de su formulario en su navegador.

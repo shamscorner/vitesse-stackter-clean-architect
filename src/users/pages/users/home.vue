@@ -23,6 +23,12 @@ const choosePlans = () => {
       {{ t('intro.fill-up-form') }}
     </v-title-lg>
 
+    <v-description
+      m="y-5"
+    >
+      {{ t('no-data-saved') }}
+    </v-description>
+
     <div class="py-4" />
 
     <div>
@@ -31,6 +37,7 @@ const choosePlans = () => {
         id="inputName"
         v-model="name"
         typeof="text"
+        placeholder="John Doe"
         :aria-label="t('intro.whats-your-name')"
       />
     </div>
@@ -43,6 +50,7 @@ const choosePlans = () => {
         id="inputEmail"
         v-model="email"
         typeof="email"
+        placeholder="john@example.com"
         :aria-label="t('intro.whats-your-email')"
       />
     </div>

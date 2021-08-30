@@ -31,13 +31,11 @@ const confirmSelectedPlan = () => {
     <v-title-lg>
       {{ t('order.order-summary') }}
     </v-title-lg>
-    <p
+    <v-description
       m="y-5"
-      text="gray-500"
-      dark="text-gray-400"
     >
       {{ t('order.description') }}
-    </p>
+    </v-description>
     <div class="flex flex-col space-y-4">
       <PlanItem
         :plan-title="`${t('order.plans.annual')} ${t('order.plan')}`"
