@@ -65,6 +65,17 @@ const choosePlans = () => {
         {{ t('button.choose-plans') }}
       </VButton>
     </div>
+
+    <div class="mb-8">
+      <VButtonText
+        text="gray-500"
+        font="semibold"
+        p="x-4 y-2"
+        @click.self="router.back()"
+      >
+        {{ t('button.back') }}
+      </VButtonText>
+    </div>
   </div>
 </template>
 

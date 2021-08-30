@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import { useUserStore } from '~/users/stores/user'
-
-const user = useUserStore()
-const name = ref(user.savedName)
-
 const router = useRouter()
 const go = () => {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+  router.push('/users/home')
 }
 
 const { t } = useI18n()
@@ -19,37 +13,24 @@ const { t } = useI18n()
       <carbon-campsite class="inline-block" />
     </p>
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
+      <a
+        rel="noreferrer"
+        href="https://github.com/antfu/vitesse"
+        target="_blank"
+        class="underline"
+      >
         Vitesse
       </a>
     </p>
-    <p>
+    <p class="mt-4 max-w-md mx-auto">
       <em class="text-sm opacity-75">{{ t('intro.desc') }}</em>
     </p>
 
     <div class="py-4" />
 
-    <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    >
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
     <div>
       <button
         class="m-3 text-sm btn"
-        :disabled="!name"
         @click="go"
       >
         {{ t('button.go') }}
@@ -57,8 +38,3 @@ const { t } = useI18n()
     </div>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>

@@ -23,6 +23,8 @@ const selectCurrentPlan = (plan: Plan) => {
 
 const confirmSelectedPlan = () => {
   orderStore.setCurrentPlan(currentPlan)
+
+  router.push('/orders/confirm')
 }
 </script>
 

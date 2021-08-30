@@ -7,7 +7,7 @@ button:
   toggle_langs: Change languages
   choose-plans: Choose Plans
 intro:
-  desc: Opinionated Vite Starter Template
+  desc: Opinionated Vite Starter Template. Customized to support modular architecture pattern.
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
   aka: Also known as

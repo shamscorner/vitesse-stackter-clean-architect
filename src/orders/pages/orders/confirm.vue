@@ -1,11 +1,26 @@
 <script setup lang="ts">
-const { t } = useI18n()
+import { useUserStore } from '~/users/stores/user'
+import { useOrderStore } from '~/orders/stores/order'
+
 const router = useRouter()
+const orderStore = useOrderStore()
+
+// redirect to home if no order saved
+if (!orderStore.savedPlanTitle)
+  router.push('/')
+
+const { t } = useI18n()
+const userStore = useUserStore()
+
 </script>
 
 <template>
   <div class="max-w-md mx-auto">
     <carbon-pedestrian text="5xl teal-500" m="y-3" />
+
+    <p class="mb-3">
+      {{ t('intro.hi', { name: userStore.savedName }) }}
+    </p>
 
     <v-title-lg>
       {{ t('order.thanks-message') }}
@@ -16,6 +31,14 @@ const router = useRouter()
     >
       {{ t('order.plan-contact-info') }}
     </v-description>
+
+    <PlanItem
+      :plan-title="orderStore.savedPlanTitle"
+      :plan-cost="orderStore.savedPlanCost"
+      :plan-duration="orderStore.savedPlanDuration"
+      :is-selected="true"
+      class="w-full"
+    />
 
     <v-description
       m="y-5"
