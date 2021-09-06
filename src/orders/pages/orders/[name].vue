@@ -44,7 +44,7 @@ const confirmSelectedPlan = () => {
         :plan-cost="59.99"
         :plan-duration="t('order.year')"
         :is-selected="currentPlan.duration === t('order.year')"
-        @click.self="selectCurrentPlan({
+        @click="selectCurrentPlan({
           cost: 59.99,
           title: t('order.plans.annual'),
           duration: t('order.year')
@@ -55,7 +55,7 @@ const confirmSelectedPlan = () => {
         :plan-cost="7.99"
         :plan-duration="t('order.month')"
         :is-selected="currentPlan.duration === t('order.month')"
-        @click.self="selectCurrentPlan({
+        @click="selectCurrentPlan({
           cost: 7.99,
           title: t('order.plans.monthly'),
           duration: t('order.month')
@@ -66,7 +66,7 @@ const confirmSelectedPlan = () => {
         :plan-cost="2.99"
         :plan-duration="t('order.week')"
         :is-selected="currentPlan.duration === t('order.week')"
-        @click.self="selectCurrentPlan({
+        @click="selectCurrentPlan({
           cost: 2.99,
           title: t('order.plans.weekly'),
           duration: t('order.week')
@@ -78,7 +78,7 @@ const confirmSelectedPlan = () => {
       <VButton
         text="base"
         p="x-4 y-2"
-        @click.self="confirmSelectedPlan"
+        @click="confirmSelectedPlan"
       >
         {{ t('order.confirm-selected-plan') }}
       </VButton>
@@ -89,7 +89,7 @@ const confirmSelectedPlan = () => {
         text="gray-500"
         font="semibold"
         p="x-4 y-2"
-        @click.self="router.back()"
+        @click="router.back()"
       >
         {{ t('order.cancel-order') }}
       </VButtonText>
