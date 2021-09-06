@@ -3,7 +3,7 @@
 </p>
 
 <p align='center'>
-Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
+Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br> with modular design pattern.
 </p>
 
 <br>
@@ -18,19 +18,19 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
-- 🗂 [File based routing](./src/pages)
+- 🗂 [File based routing](./src/common/pages)
 
-- 📦 [Components auto importing](./src/components)
+- 📦 [Components auto importing](./src/common/components)
 
 - 🍍 [State Management via Pinia](https://pinia.esm.dev/)
 
-- 📑 [Layout system](./src/layouts)
+- 📑 [Layout system](./src/common/layouts)
 
 - 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
 
 - 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
 
-- 😃 [Use icons from any icon sets, with no compromise](https://github.com/antfu/vite-plugin-icons)
+- 😃 [Use icons from any icon sets, with no compromise](https://github.com/antfu/unplugin-icons)
 
 - 🌍 [I18n ready](./locales)
 
@@ -60,7 +60,7 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
 ### Icons
 
 - [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) - icons as Vue components
+- [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as Vue components
 
 ### Plugins
 
@@ -68,7 +68,7 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
   - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
   - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
 - [Pinia](https://pinia.esm.dev) - Intuitive, type safe, light and flexible Store for Vue using the composition api
-- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) - components auto import
+- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
 - [`vite-plugin-pwa`](https://github.com/antfu/vite-plugin-pwa) - PWA
 - [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - Windi CSS Integration
