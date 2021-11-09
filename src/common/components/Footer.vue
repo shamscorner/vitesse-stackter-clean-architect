@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isDark, toggleDark } from '~/common/logic'
+import { isDark, toggleDark } from '~/common/composables'
 
 const { t, availableLocales, locale } = useI18n()
 
