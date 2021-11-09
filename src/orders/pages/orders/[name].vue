@@ -78,6 +78,7 @@ const confirmSelectedPlan = () => {
       <VButton
         text="base"
         p="x-4 y-2"
+        data-test="btn-confirm-plan"
         @click="confirmSelectedPlan"
       >
         {{ t('order.confirm-selected-plan') }}

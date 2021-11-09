@@ -60,6 +60,7 @@ const choosePlans = () => {
         text="base"
         p="x-4 y-2"
         :disabled="!name || !email"
+        data-test="btn-choose-plan"
         @click.self="choosePlans"
       >
         {{ t('button.choose-plans') }}
