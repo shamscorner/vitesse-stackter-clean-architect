@@ -8,6 +8,10 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br> with modul
 
 <br>
 
+If you are really into the "Vitesse" starter template created by [Anthony Fu](https://github.com/antfu) (Vue core team member) but want to use the clean architectural pattern instead of monolithic architecture, then you can clone this repo and use your own project. If you want a quick introduction concept, you can read this very short [blog post](https://www.shamscorner.com/blog/vue-3-vite-modular-architecture-vitesse).
+
+<br>
+
 <p align='center'>
 <a href="https://vite-vue3-clean-arch.netlify.app/" target="_blank">Live Demo</a>
 </p>
