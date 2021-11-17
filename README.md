@@ -113,6 +113,7 @@ As this template is strongly opinionated, the following provides a curated list 
 - [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) - Vitesse for Nuxt 3
 - [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
 - [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
+- [vitesse-stackter-clean-architect](https://github.com/shamscorner/vitesse-stackter-clean-architect) by [@shamscorner](https://github.com/shamscorner) - A modular clean architecture pattern in vitesse template
 
 ###### Community
 
@@ -142,7 +143,6 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 
 When you use this template, try follow the checklist to update your info properly
 
-- [ ] Rename `name` field in `package.json`
 - [ ] Change the author name in `LICENSE`
 - [ ] Change the title in `App.vue`
 - [ ] Change the favicon in `public`
