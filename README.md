@@ -38,6 +38,8 @@ If you are really into the "Vitesse" starter template created by [Anthony Fu](ht
 
 - 🌍 [I18n ready](./locales)
 
+- 🚀 Shipped with [Apollo GraphQL](https://www.apollographql.com/)
+
 - 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md)
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
@@ -85,6 +87,9 @@ If you are really into the "Vitesse" starter template created by [Anthony Fu](ht
   - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n) - Vite plugin for Vue I18n
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
+- [Vue Apollo GraphQL](https://v4.apollo.vuejs.org/)
+  - [@apollo/client](https://github.com/apollographql/apollo-client) - Fully-featured caching GraphQL client with vue integration
+  - [@vue/apollo-composable](https://github.com/vuejs/apollo) - Apollo GraphQL functions for Vue Composition API
 
 ### Coding Style
 
@@ -152,6 +157,8 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Change the favicon in `public`
 - [ ] Remove the `.github` folder which contains the funding info
 - [ ] Clean up the READMEs and remove routes
+- [ ] Update client service url for Apollo GraphQL in `apollo.config.js` if you use GraphQL API
+- [ ] Update http link for GraphQL API in `src/common/ApolloClient.ts` if you use GraphQL API
 
 And, enjoy :)
 

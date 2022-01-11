@@ -1,9 +1,15 @@
 <script setup lang="ts">
+// graphql example
+import { useExampleQuery } from '~/common/services/useExample.query'
+const { result, loading, error } = useExampleQuery()
+
+// Routing
 const router = useRouter()
 const go = () => {
   router.push('/users/home')
 }
 
+// Internationalization
 const { t } = useI18n()
 </script>
 
@@ -35,6 +41,25 @@ const { t } = useI18n()
       >
         {{ t('button.go') }}
       </button>
+    </div>
+
+    <div class="py-4" />
+
+    <h1 class="text-lg underline font-semibold mb-3">
+      <a href="https://v4.apollo.vuejs.org/" target="_blank">
+        Vue Apollo GraphQL V4 (beta)
+      </a>
+    </h1>
+    <div>
+      <div v-if="loading">
+        Loading. . .
+      </div>
+      <div v-else-if="error">
+        Error: {{ error.message }}
+      </div>
+      <code v-else-if="result">
+        {{ result }}
+      </code>
     </div>
   </div>
 </template>
