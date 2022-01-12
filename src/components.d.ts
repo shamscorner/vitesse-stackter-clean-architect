@@ -4,6 +4,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
+    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
+    CarbonLanguage: typeof import('~icons/carbon/language')['default']
+    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
+    CarbonMoon: typeof import('~icons/carbon/moon')['default']
+    CarbonSun: typeof import('~icons/carbon/sun')['default']
     Counter: typeof import('./counter/components/Counter.vue')['default']
     Footer: typeof import('./common/components/Footer.vue')['default']
     PlanItem: typeof import('./orders/components/PlanItem.vue')['default']
