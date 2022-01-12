@@ -24,7 +24,7 @@ const choosePlans = () => {
     </v-title-lg>
 
     <v-description
-      m="y-5"
+      class="my-5"
     >
       {{ t('no-data-saved') }}
     </v-description>
@@ -32,7 +32,9 @@ const choosePlans = () => {
     <div class="py-4" />
 
     <div>
-      <label class="block mb-1" text="sm gray-500" for="inputName">{{ t('intro.whats-your-name') }}</label>
+      <label class="block mb-1 text-sm text-gray-500" for="inputName">
+        {{ t('intro.whats-your-name') }}
+      </label>
       <v-input
         id="inputName"
         v-model="name"
@@ -45,7 +47,9 @@ const choosePlans = () => {
     <div class="py-2" />
 
     <div>
-      <label class="block mb-1" text="sm gray-500" for="inputEmail">{{ t('intro.whats-your-email') }}</label>
+      <label class="block mb-1 text-sm text-gray-500" for="inputEmail">
+        {{ t('intro.whats-your-email') }}
+      </label>
       <v-input
         id="inputEmail"
         v-model="email"
@@ -57,8 +61,7 @@ const choosePlans = () => {
 
     <div class="mt-5">
       <VButton
-        text="base"
-        p="x-4 y-2"
+        class="px-4 py-2 text-base"
         :disabled="!name || !email"
         data-test="btn-choose-plan"
         @click.self="choosePlans"
@@ -69,9 +72,7 @@ const choosePlans = () => {
 
     <div class="mb-8">
       <VButtonText
-        text="gray-500"
-        font="semibold"
-        p="x-4 y-2"
+        class="px-4 py-2 text-gray-500 font-semibold"
         @click.self="router.back()"
       >
         {{ t('button.back') }}

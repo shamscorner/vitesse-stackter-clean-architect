@@ -21,13 +21,7 @@ const onInput = (event: Event) => {
   <input
     :value="props.modelValue"
     autocomplete="false"
-    p="x-4 y-2"
-    w="250px"
-    text="center"
-    bg="transparent"
-    border="~ rounded gray-200 dark:gray-700"
-    hover="ring-2 ring-teal-400"
-    class="transition focus:(outline-none ring-2 ring-teal-400)"
+    class="transition px-4 py-2 w-[250px] text-center bg-transparent border rounded border-gray-200 hover:ring-2 hover:ring-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-400 dark:border-gray-700"
     @input="onInput"
   >
 </template>

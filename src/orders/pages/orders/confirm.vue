@@ -16,7 +16,7 @@ const userStore = useUserStore()
 
 <template>
   <div class="max-w-md mx-auto">
-    <carbon-pedestrian text="5xl teal-500" m="y-3" />
+    <carbon-pedestrian class="text-5xl text-teal-500 my-3 mx-auto" />
 
     <p class="mb-3">
       {{ t('intro.hi', { name: userStore.savedName }) }}
@@ -27,7 +27,7 @@ const userStore = useUserStore()
     </v-title-lg>
 
     <v-description
-      m="y-5"
+      class="my-5"
     >
       {{ t('order.plan-contact-info') }}
     </v-description>
@@ -41,16 +41,14 @@ const userStore = useUserStore()
     />
 
     <v-description
-      m="y-5"
+      class="my-5"
     >
       {{ t('no-data-saved') }}
     </v-description>
 
     <div class="mb-8">
       <VButtonText
-        text="gray-500"
-        font="semibold"
-        p="x-4 y-2"
+        class="text-gray-500 font-semibold px-4 py-2"
         @click.self="router.push('/')"
       >
         {{ t('button.home') }}
