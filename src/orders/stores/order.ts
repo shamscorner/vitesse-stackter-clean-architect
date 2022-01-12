@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { Plan } from '~/orders/types/plan'
+import type { Plan } from '~/orders/types/plan'
 
 export const useOrderStore = defineStore('order', () => {
   const savedPlanTitle = ref('')

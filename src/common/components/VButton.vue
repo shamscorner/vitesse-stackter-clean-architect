@@ -2,6 +2,6 @@
   <button
     class="m-3 text-sm btn"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>

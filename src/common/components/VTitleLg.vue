@@ -4,6 +4,6 @@
     font="bold"
     dark="text-gray-300"
   >
-    <slot></slot>
+    <slot />
   </h1>
 </template>
