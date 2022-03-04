@@ -96,7 +96,7 @@ export default defineConfig({
         md.use(Prism)
         // @ts-expect-error types mismatch
         md.use(LinkAttributes, {
-          pattern: /^https?:\/\//,
+          matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
