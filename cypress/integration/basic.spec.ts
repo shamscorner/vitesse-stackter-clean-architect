@@ -10,7 +10,7 @@ context('Basic', () => {
     cy.contains('Opinionated Vite Starter Template. Customized to support modular architecture pattern.')
       .should('exist')
 
-    cy.get('[btn]')
+    cy.get('.btn')
       .click()
       .url()
       .should('eq', 'http://localhost:3333/users/home')
