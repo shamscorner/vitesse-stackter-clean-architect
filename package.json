@@ -4,7 +4,7 @@
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
-    "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
