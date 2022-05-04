@@ -15,7 +15,7 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 
-const markdownWrapperClasses = 'prose prose-sm mx-auto text-left'
+const markdownWrapperClasses = 'prose lg:prose-xl mx-auto text-left'
 
 export default defineConfig({
   resolve: {
@@ -50,6 +50,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         'vue-i18n',
+        'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
       ],
@@ -146,12 +147,6 @@ export default defineConfig({
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
   ],
-
-  server: {
-    fs: {
-      strict: true,
-    },
-  },
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
