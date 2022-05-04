@@ -2,7 +2,7 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module 'vue' {
+declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
@@ -14,6 +14,8 @@ declare module 'vue' {
     Footer: typeof import('./common/components/Footer.vue')['default']
     PlanItem: typeof import('./orders/components/PlanItem.vue')['default']
     README: typeof import('./common/components/README.md')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     VButton: typeof import('./common/components/VButton.vue')['default']
     VButtonText: typeof import('./common/components/VButtonText.vue')['default']
     VDescription: typeof import('./common/components/VDescription.vue')['default']
