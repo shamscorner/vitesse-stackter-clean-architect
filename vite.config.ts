@@ -15,7 +15,7 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 
-const markdownWrapperClasses = 'prose lg:prose-xl mx-auto text-left'
+const markdownWrapperClasses = 'prose lg:prose-xl mx-auto text-left dark:prose-invert'
 
 export default defineConfig({
   resolve: {
