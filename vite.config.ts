@@ -41,7 +41,7 @@ export default defineConfig({
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts({
-      layoutsDir: 'src/common/layouts',
+      layoutsDirs: 'src/common/layouts',
     }),
 
     // https://github.com/antfu/unplugin-auto-import
