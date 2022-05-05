@@ -9,7 +9,7 @@ describe('Counter.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('should increment by 1', async() => {
+  it('should increment by 1', async () => {
     const wrapper = mount(Counter, { props: { initial: 0 } })
     expect(wrapper.text()).toContain('0')
 
@@ -20,7 +20,7 @@ describe('Counter.vue', () => {
     expect(wrapper.text()).toContain('1')
   })
 
-  it('should decrement by 1', async() => {
+  it('should decrement by 1', async () => {
     const wrapper = mount(Counter, { props: { initial: 1 } })
     expect(wrapper.text()).toContain('1')
 
