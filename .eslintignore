@@ -1,2 +1,6 @@
 dist
 public
+cypress/plugins
+cypress/support
+cypress/fixtures
+cypress/downloads

@@ -5,7 +5,7 @@ button:
   home: Inicio
   toggle_dark: Alternar modo oscuro
   toggle_langs: Cambiar idiomas
-  choose-plans: Elija planes 
+  choose-plans: Elija planes
 intro:
   desc: Plantilla de Inicio de Vite Dogmática. Personalizado para admitir el patrón de arquitectura modular.
   dynamic-route: Demo de ruta dinámica
