@@ -19,6 +19,7 @@ specifiers:
   cypress: ^9.6.0
   eslint: ^8.14.0
   eslint-plugin-cypress: ^2.12.1
+  esno: ^0.14.1
   graphql: ^16.4.0
   graphql-tag: ^2.12.6
   https-localhost: ^4.7.1
@@ -29,6 +30,7 @@ specifiers:
   pnpm: ^7.0.0
   postcss: ^8.4.13
   prism-theme-vars: ^0.2.2
+  react: ^18.1.0
   tailwindcss: ^3.0.24
   typescript: ^4.6.4
   unplugin-auto-import: ^0.7.1
@@ -50,7 +52,7 @@ specifiers:
   vue-tsc: ^0.34.11
 
 dependencies:
-  '@apollo/client': 3.6.2_graphql@16.4.0
+  '@apollo/client': 3.6.2_cxfcglayresyyxxylwnor5zopi
   '@vue/apollo-composable': 4.0.0-alpha.17_5kg6e4e3n4ckix6k6ljby37im4
   '@vueuse/core': 8.4.1_vue@3.2.33
   '@vueuse/head': 0.7.6_vue@3.2.33
@@ -59,6 +61,7 @@ dependencies:
   nprogress: 0.2.0
   pinia: 2.0.13_ytvqwwdyss532bvoq2clv4ed5m
   prism-theme-vars: 0.2.2
+  react: 18.1.0
   vue: 3.2.33
   vue-demi: 0.12.5_vue@3.2.33
   vue-i18n: 9.1.10_vue@3.2.33
@@ -79,6 +82,7 @@ devDependencies:
   cypress: 9.6.0
   eslint: 8.14.0
   eslint-plugin-cypress: 2.12.1_eslint@8.14.0
+  esno: 0.14.1
   https-localhost: 4.7.1
   markdown-it-link-attributes: 4.0.0
   markdown-it-prism: 2.2.4
@@ -223,7 +227,7 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@apollo/client/3.6.2_graphql@16.4.0:
+  /@apollo/client/3.6.2_cxfcglayresyyxxylwnor5zopi:
     resolution: {integrity: sha512-DNWyl+NNU2VsfHtXwOr4rV9hnQFPkl2/dNXeouhk9q7bXCWdEh3K8YTt/frULGVKbQjtnlPmz8C+LFI/JZ2N3w==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -247,10 +251,11 @@ packages:
       hoist-non-react-statics: 3.3.2
       optimism: 0.16.1
       prop-types: 15.8.1
+      react: 18.1.0
       symbol-observable: 4.0.0
       ts-invariant: 0.10.2
       tslib: 2.4.0
-      use-sync-external-store: 1.1.0
+      use-sync-external-store: 1.1.0_react@18.1.0
       zen-observable-ts: 1.2.3
     dev: false
 
@@ -2009,7 +2014,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      '@apollo/client': 3.6.2_graphql@16.4.0
+      '@apollo/client': 3.6.2_cxfcglayresyyxxylwnor5zopi
       graphql: 16.4.0
       throttle-debounce: 3.0.1
       ts-essentials: 9.1.2_typescript@4.6.4
@@ -3443,6 +3448,12 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-node-loader/0.6.5:
+    resolution: {integrity: sha512-uPP+dllWm38cFvDysdocutN3lfe5pTIbddAHp1ENyLzpHYqE2r+3Wo+pfg9X3p8DFWwzIisft5YkeBIthIcixw==}
+    dependencies:
+      esbuild: 0.14.38
+    dev: true
+
   /esbuild-openbsd-64/0.14.38:
     resolution: {integrity: sha512-CDswYr2PWPGEPpLDUO50mL3WO/07EMjnZDNKpmaxUPsrW+kVM3LoAqr/CE8UbzugpEiflYqJsGPLirThRB18IQ==}
     engines: {node: '>=12'}
@@ -3451,6 +3462,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-register/3.3.2_esbuild@0.14.38:
+    resolution: {integrity: sha512-jceAtTO6zxPmCfSD5cBb3rgIK1vmuqCKYwgylHiS1BF4pq0jJiJb4K2QMuqF4BEw7XDBRatYzip0upyTzfkgsQ==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      esbuild: 0.14.38
+    dev: true
 
   /esbuild-sunos-64/0.14.38:
     resolution: {integrity: sha512-2mfIoYW58gKcC3bck0j7lD3RZkqYA7MmujFYmSn9l6TiIcAMpuEvqksO+ntBgbLep/eyjpgdplF7b+4T9VJGOA==}
@@ -3850,6 +3869,17 @@ packages:
       v8-compile-cache: 2.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /esno/0.14.1:
+    resolution: {integrity: sha512-yDFYw6dGUjCT1qKsdG7WOc/RzIh/qwxUEVZ+ohCltaxBxEFMNqeqbQL9xjRl6Yvdwrfc5OCjUA9JbFmuu/8BKg==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      esbuild: 0.14.38
+      esbuild-node-loader: 0.6.5
+      esbuild-register: 3.3.2_esbuild@0.14.38
+      import-meta-resolve: 1.1.1
     dev: true
 
   /espree/6.2.1:
@@ -4566,6 +4596,12 @@ packages:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
+    dev: true
+
+  /import-meta-resolve/1.1.1:
+    resolution: {integrity: sha512-JiTuIvVyPaUg11eTrNDx5bgQ/yMKMZffc7YSjvQeSMXy58DO2SQ8BtAf3xteZvmzvjYh14wnqNjL8XVeDy2o9A==}
+    dependencies:
+      builtins: 4.1.0
     dev: true
 
   /imurmurhash/0.1.4:
@@ -5935,6 +5971,13 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  /react/18.1.0:
+    resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
   /read-pkg-up/7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
     engines: {node: '>=8'}
@@ -7006,10 +7049,12 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /use-sync-external-store/1.1.0:
+  /use-sync-external-store/1.1.0_react@18.1.0:
     resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /util-deprecate/1.0.2:

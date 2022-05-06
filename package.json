@@ -10,7 +10,8 @@
     "test": "vitest",
     "test:e2e": "cypress open",
     "test:unit": "vitest",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "postinstall": "esmo scripts/patch.ts"
   },
   "dependencies": {
     "@apollo/client": "^3.6.2",
@@ -22,6 +23,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.13",
     "prism-theme-vars": "^0.2.2",
+    "react": "^18.1.0",
     "vue": "^3.2.33",
     "vue-demi": "^0.12.5",
     "vue-i18n": "^9.1.10",
@@ -42,6 +44,7 @@
     "cypress": "^9.6.0",
     "eslint": "^8.14.0",
     "eslint-plugin-cypress": "^2.12.1",
+    "esno": "^0.14.1",
     "https-localhost": "^4.7.1",
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.4",
