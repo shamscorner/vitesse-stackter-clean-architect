@@ -28,7 +28,7 @@ const { t } = useI18n()
         Vitesse
       </a>
     </p>
-    <p class="mt-4 max-w-md mx-auto">
+    <p class="max-w-md mx-auto mt-4">
       <em class="text-sm opacity-75">{{ t('intro.desc') }}</em>
     </p>
 
@@ -45,7 +45,7 @@ const { t } = useI18n()
 
     <div class="py-4" />
 
-    <h1 class="text-lg underline font-semibold mb-3">
+    <h1 class="mb-3 text-lg font-semibold underline">
       <a href="https://v4.apollo.vuejs.org/" target="_blank">
         Vue Apollo GraphQL V4 (beta)
       </a>
@@ -57,9 +57,19 @@ const { t } = useI18n()
       <div v-else-if="error">
         Error: {{ error.message }}
       </div>
-      <code v-else-if="result">
-        {{ result }}
-      </code>
+      <div v-else-if="result">
+        <div class="mb-1 text-lg font-semibold">
+          Example Query Result:
+        </div>
+        <code>{{ result }}</code>
+        <div class="mt-5">
+          <div class="mb-1 text-lg font-semibold">
+            Specific values from result object
+          </div>
+          <div>Company CEO: {{ result.company.ceo }}</div>
+          <div>Roadster Apoapsis_au: {{ result.roadster.apoapsis_au }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
