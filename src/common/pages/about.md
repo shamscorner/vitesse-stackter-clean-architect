@@ -8,12 +8,12 @@ title: About
   <h3 class="mt-5">About</h3>
 </div>
 
-[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **WindiCSS** for UI.
+[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for UI.
 
 However, most industry standard applications follow a microservice based modular clean architecture pattern instead of monolithic architecture. Because it gives a better team collaboration advantages and efficient future maintainability. This is exactly what you will get in this repository which is a forked version of vitesse template with some customizations.
 
-- Apollo GraphQL
-- Pure [Tailwind CSS V3](https://tailwindcss.com/) instead of [Windi CSS](https://windicss.org/) for better maintainability
+- Apollo GraphQL with Typescript support
+- [Tailwind CSS V3](https://tailwindcss.com/) instead of [UnoCSS](https://github.com/unocss/unocss)
 - Modular Architecture Pattern with separation of concern
 
 ### Quick Overview

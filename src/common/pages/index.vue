@@ -71,5 +71,13 @@ const { t } = useI18n()
         </div>
       </div>
     </div>
+
+    <div class="mx-auto mt-10 prose">
+      <h1>Typography Demo</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque suscipit consequuntur optio? Earum doloremque qui adipisci magnam aliquam dolorem iste delectus! Possimus, nam beatae quisquam provident reprehenderit praesentium ipsa ullam!
+      </p>
+      <code>print('Hello World')</code>
+    </div>
   </div>
 </template>
