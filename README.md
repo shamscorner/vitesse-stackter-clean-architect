@@ -88,6 +88,7 @@ If you are really into the "Vitesse" starter template created by [Anthony Fu](ht
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
 - [`vite-ssg-sitemap`](https://github.com/jbaubree/vite-ssg-sitemap) - Sitemap generator
+- [`vite-plugin-vue-inspector`](https://github.com/webfansplz/vite-plugin-vue-inspector) - jump to local IDE source code while click the element of browser automatically
 - [Vue Apollo GraphQL](https://v4.apollo.vuejs.org/)
   - [@apollo/client](https://github.com/apollographql/apollo-client) - Fully-featured caching GraphQL client with vue integration
   - [@vue/apollo-composable](https://github.com/vuejs/apollo) - Apollo GraphQL functions for Vue Composition API

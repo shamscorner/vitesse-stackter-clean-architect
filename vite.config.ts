@@ -12,6 +12,7 @@ import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
+import Inspector from 'vite-plugin-vue-inspector'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 
@@ -146,6 +147,11 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
+
+    // https://github.com/webfansplz/vite-plugin-vue-inspector
+    Inspector({
+      enabled: false,
+    }),
   ],
 
   // https://github.com/antfu/vite-ssg
