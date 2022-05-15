@@ -11,7 +11,6 @@ if (!orderStore.savedPlanTitle)
 
 const { t } = useI18n()
 const userStore = useUserStore()
-
 </script>
 
 <template>

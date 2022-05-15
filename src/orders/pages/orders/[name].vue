@@ -47,7 +47,7 @@ const confirmSelectedPlan = () => {
         @click="selectCurrentPlan({
           cost: 59.99,
           title: t('order.plans.annual'),
-          duration: t('order.year')
+          duration: t('order.year'),
         })"
       />
       <PlanItem
@@ -58,7 +58,7 @@ const confirmSelectedPlan = () => {
         @click="selectCurrentPlan({
           cost: 7.99,
           title: t('order.plans.monthly'),
-          duration: t('order.month')
+          duration: t('order.month'),
         })"
       />
       <PlanItem
@@ -69,7 +69,7 @@ const confirmSelectedPlan = () => {
         @click="selectCurrentPlan({
           cost: 2.99,
           title: t('order.plans.weekly'),
-          duration: t('order.week')
+          duration: t('order.week'),
         })"
       />
     </div>
