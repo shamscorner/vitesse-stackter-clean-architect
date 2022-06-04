@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import { apolloClient } from './common/ApolloClient'
-import { isDark } from '~/common/composables'
+import { isDark, preferredDark } from '~/common/composables'
 
 // https://v4.apollo.vuejs.org/
 provide(DefaultApolloClient, apolloClient)
@@ -12,10 +12,17 @@ provide(DefaultApolloClient, apolloClient)
 useHead({
   title: 'Vitesse',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
+    { name: 'description', content: 'Opinionated Vite Starter Template with modular architecture design' },
     {
       name: 'theme-color',
       content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
+    },
+  ],
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: computed(() => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
     },
   ],
 })
