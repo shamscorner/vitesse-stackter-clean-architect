@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     CarbonLanguage: typeof import('~icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
+    CarbonMusic: typeof import('~icons/carbon/music')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     Counter: typeof import('./counter/components/Counter.vue')['default']
     Footer: typeof import('./common/components/Footer.vue')['default']
