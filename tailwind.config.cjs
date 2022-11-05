@@ -1,9 +1,8 @@
-const colors = require('tailwindcss/colors')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
+    './src/**/*.{vue,js,ts,jsx,tsx,md}',
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -20,7 +19,7 @@ module.exports = {
               'textDecoration': 'underline',
               '&:hover': {
                 opacity: 1,
-                color: colors.teal[600],
+                color: '#0D9488',
               },
             },
             b: { color: 'inherit' },
