@@ -13,10 +13,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
-import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
-
-const markdownWrapperClasses = 'prose lg:prose-xl mx-auto text-left dark:prose-invert'
+import Shiki from 'markdown-it-shiki'
 
 export default defineConfig({
   resolve: {
@@ -93,11 +91,16 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
-      wrapperClasses: markdownWrapperClasses,
+      wrapperClasses: 'prose lg:prose-xl mx-auto text-left dark:prose-invert',
       headEnabled: true,
       markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism)
+        // https://github.com/shikijs/shiki
+        md.use(Shiki, {
+          theme: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark',
+          },
+        })
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
