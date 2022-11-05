@@ -138,6 +138,7 @@ As this template is strongly opinionated, the following provides a curated list 
 - [vide](https://github.com/Nico-Mayer/vide) by [@nico-mayer](https://github.com/Nico-Mayer) - Vite superlight Beginner Starter Template
 
 ## Try it now!
+> Vitesse requires Node >=14.18
 
 ### GitHub Template
 
