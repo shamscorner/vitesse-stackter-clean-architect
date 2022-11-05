@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     CarbonMusic: typeof import('~icons/carbon/music')['default']
     CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Counter: typeof import('./counter/components/Counter.vue')['default']
     Footer: typeof import('./common/components/Footer.vue')['default']
     PlanItem: typeof import('./orders/components/PlanItem.vue')['default']
